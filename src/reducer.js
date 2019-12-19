@@ -1,11 +1,7 @@
 import { combineReducers } from 'redux';
 
 
-const firstStatePost = {
-    post: ''
-}
-
-function Post(state = firstStatePost, action) {
+function Post(state = {post: ''}, action) {
     switch (action.type) {
         case 'GET_POST':
           return action.obj 
@@ -14,11 +10,7 @@ function Post(state = firstStatePost, action) {
 }
 
 
-const firstStateAllPosts = {
-  posts: []
-}
-
-function AllPosts(state = firstStateAllPosts, action){
+function AllPosts(state = {posts: []}, action){
   switch (action.type) {
     case 'GET_ALL_POSTS':
       return action.array 
@@ -27,11 +19,7 @@ function AllPosts(state = firstStateAllPosts, action){
 }
 
 
-const firstStateContentVisible = {
-  isVisibleContentPost: []
-}
-
-function VisiblePosts(state = firstStateContentVisible, action){
+function VisiblePosts(state = {isVisibleContentPost: []}, action){
   switch (action.type) {
     case 'GET_CONTENT_VISIBLE':
       return action.array 
